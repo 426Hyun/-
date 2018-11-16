@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="euc.kr">
+        <link href="1115test.css" rel="stylesheet" type="text/css">
+	<style>
+		#f1{ position:absoulute; top:300px; left: 600px;}
+	</style>
+ </head>
+<body>
+
+        <div id=wrap>
+            <div id=header>
+                <div id=logo>
+               <img src="LOGO.jpg"width="120" hight="90">
+            </div>
+            </div>
+            
+            <div id=menu>
+                <ul>
+                    <li><a href="" target="blank">홈</a></li>
+                    <li><a href="find.html" target="blank">가맹점찾기</a></li>
+                    <li><a href="">지도보기</a></li>
+                    <li><a href="">커뮤니티</a></li>
+                </ul>
+            </div>
+            <div id=footer>
+            
+            </div>
+ <div id= "main">
+<form >
+ <table>
+<tr><td><h1>회원 등록</h1></td></tr>
+ <tr><td><strong>이름*  </strong></td>
+ <td><input type="text" name="name1"></td></tr>
+ <tr><td><strong>성별*  </strong></td>
+ <td><input type="radio" name="man" value="man">남자 
+ <input type="radio" name="woman" value="woman">여자 </td></tr>
+ <tr><td><strong>휴대폰 번호* Phone* </td>
+ <td><input type="tel" name="phone"></td></tr>
+ <tr><td><strong>이메일*  </strong></td>
+ <td><input type="email" name="email"></td></tr>
+ <tr><td><strong>카드번호 등록* </strong></td>
+ <td><input type="text" name="password"></td></tr>
+ <tr><td><strong>카드번호 검증*  </strong></td>
+ <td><input type="text" name="conf"></td></tr>
+ <tr><td></td>
+ <td><input type="button" value="제출" onclick="checkFn()">
+ <input type="reset" value="지우기"></td></tr>
+ </table>
+ </form>
+</div>
+</div>
+<script>
+  function emptycheck(){
+   if(f1.name1.value!='' && f1.phone.value!='' && f1.email.value!=''){
+    return true;
+    }
+  else{
+    f1.focus();
+    return false;
+   }
+  }
+  function passwordcheck(){
+   if(f1.password.value!=f1.conf.value){
+	f1.focus();
+	return false;
+   }
+   else{ 
+	return true;
+   }
+  }
+  function checkFn(){
+	if(emptycheck() == true){
+			if(passwordcheck() == true){
+				var str = "이름 : " + f1.name1.value + "이메일 : " + f1.email.value;
+				if(confirm(str)){				
+					alert("회원가입 완료");
+				}
+			}
+			else{
+				alert("비밀번호가 일치하지 않습니다.");
+			}
+	}
+	else{
+		alert("입력을 해주세요.");
+	}
+  }
+
+ </script>
+
+</body>
+</html> 
