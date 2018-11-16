@@ -1,0 +1,66 @@
+#wrap{
+    height: 480px;
+    border-style: solid;
+    border-color:black;
+}
+#header{
+    background-color: #ccc;
+    width: 100%;
+    height: 150px;
+    
+    
+}
+ul{
+    list-style: none;
+   
+
+}
+li{
+    color: white;
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;/*밑줄 삭제*/
+    color: white;
+}
+a:hover{
+    
+    background-color: white;
+    color: pink;
+    
+}
+
+#logo{
+  
+    color: white;
+    padding-top: 35px;
+    text-align: center;
+    
+
+    
+}
+#menu{
+    width: 150px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float:left;/*오른쪽 정렬*/
+    background-color: black;
+}
+#main{
+    float: left;
+    margin-left: 40px;
+}
+#img{
+    float: right;
+}
+#footer{
+    height: 50px;
+    text-align: center;
+    clear: both;
+    border-top: solid;
+    margin: 20px;
+    padding-top: 15px;
+    
+}
+
