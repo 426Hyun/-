@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<link href="mystyle.css" rel="stylesheet" type="text/css">
+<title>지도</title>
+</head>
+<body>
+   <div id=wrap>
+      <div id=header>
+         <div id=logomain>
+            <img src="LOGO.jpg" width="120" hight="90">
+         </div>
+      </div>
+      <div id=menu>
+         <ul>
+            <li><a href="" target="blank">홈</a></li>
+            <li><a href="find.html" target="blank">가맹점찾기</a></li>
+            <li><a href="">지도보기</a></li>
+            <li><a href="">커뮤니티</a></li>
+         </ul>
+      </div>
+      <div id=main>
+         <div id=left></div>
+         <div id=center>
+            <form name="form">
+               <div id="map" style="width: 500px; height: 400px;"></div>
+               <script type="text/javascript"
+                  src="//dapi.kakao.com/v2/maps/sdk.js?appkey=99a9e9ea9970e04758525361deb9d32f"></script>
+               <script>
+                  
+                  var container = document.getElementById('map');
+                  var options = {
+                     center : new daum.maps.LatLng(37.5653456,126.9054347),
+                     level : 3
+                  };
+
+                  var map = new daum.maps.Map(container, options);
+
+                  var marker = new daum.maps.Marker({
+                     position : map.getCenter()
+                  });
+                  marker.setMap(map);
+               </script>
+               <form name="form">
+                  <select name="sido" onChange="change1(this.value,sigungu)">
+                     <option>-선택-</option>
+                     <option value='1'>서울</option>
+                     <option value='2'>부산</option>
+                     <option value='3'>대구</option>
+                     <option value='4'>인천</option>
+                     <option value='5'>광주</option>
+                     <option value='6'>대전</option>
+                     <option value='7'>울산</option>
+                     <option value='8'>강원</option>
+                     <option value='9'>경기</option>
+                     <option value='10'>경남</option>
+                     <option value='11'>경북</option>
+                     <option value='12'>전남</option>
+                     <option value='13' selected>전북</option>
+                     <option value='14'>제주</option>
+                     <option value='15'>충남</option>
+                     <option value='16'>충북</option>
+                  </select> <select name="sigungu" onChange="change2(this.value,dong)">
+                     <option>-선택-</option>
+                     <option value='215' selected>군산시</option>
+                     <option value='216'>김제시</option>
+                     <option value='217'>남원시</option>
+                     <option value='218'>익산시</option>
+                     <option value='219'>전주시 덕진구</option>
+                     <option value='220'>전주시 완산구</option>
+                     <option value='221'>정읍시</option>
+                     <option value='222'>고창군</option>
+                     <option value='223'>무주군</option>
+                     <option value='224'>부안군</option>
+                     <option value='225'>순창군</option>
+                     <option value='226'>완주군</option>
+                     <option value='227'>임실군</option>
+                     <option value='228'>장수군</option>
+                     <option value='229'>진안군</option>
+                  </select> <select name="dong">
+                     <option>-선택-</option>
+                     <option value='261' selected></option>
+                     <option value='262'>공덕동</option>
+                     <option value='263'>아현동</option>
+                     <option value='264'>도화동</option>
+                     <option value='265'>용강동</option>
+                     <option value='266'>대흥동</option>
+                     <option value='267'>염리동</option>
+                     <option value='268'>서교동</option>
+                     <option value='269'>연남동</option>
+                     <option value='270'>합정동</option>
+                     <option value='271'>신수동</option>
+                     <option value='272'>서강동</option>
+                     <option value='273'>망원1동</option>
+                     <option value='274'>망원2동</option>
+                     <option value='275'>성산동</option>
+                     <option value='276'>성산1동</option>
+                     <option value='277'>성산2동</option>
+                     <option value='278'>상암동</option>
+                     <option value='279'>구수동</option>
+                     <option value='280'>노고산동</option>
+                     <option value='281'>동교동</option>
+                     <option value='282'>마포동</option>
+                     <option value='283'>상수동</option>
+                     <option value='284'>중동</option>
+                     <option value='285'>창전동</option>
+                     <option value='286'>신공덕동</option>
+                  </select> <input type="button" id="button1" onclick="button1_click()"
+                     value=검색>
+         </div>
+
+      </div>
+   </div>
+   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>
+   <script type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+      
+   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-auth.js"></script>
+   <script
+      src="https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js"></script>
+   <script>
+      // Initialize Firebase
+      var config = {
+         apiKey : "AIzaSyALqBTAi2BUZlkdCmk3JMAYGixoOA4ZJrs",
+         authDomain : "hackathon-7e84a.firebaseapp.com",
+         databaseURL : "https://hackathon-7e84a.firebaseio.com",
+         projectId : "hackathon-7e84a",
+         storageBucket : "",
+         messagingSenderId : "173241953951"
+      };
+      firebase.initializeApp(config);
+
+      var sido_num = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+            15, 16);
+      var sido_name = new Array('서울', '부산', '대구', '인천', '광주', '대전', '울산',
+            '강원', '경기', '경남', '경북', '전남', '전북', '제주', '충남', '충북');
+
+      var sigungu_num = new Array();
+      var sigungu_name = new Array();
+
+      var dong_num = new Array();
+      var dong_name = new Array();
+
+      sigungu_num[1] = new Array(17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
+            28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41);
+      sigungu_name[1] = new Array('마포구', '도봉구', '은평구', '강서구', '관악구', '광진구',
+            '구로구', '금천구', '노원구', '강동구', '동대문구', '동작구', '강남구', '서대문구',
+            '서초구', '성동구', '성북구', '송파구', '양천구', '영등포구', '용산구', '강북구', '종로구',
+            '중구', '중랑구');
+
+      
+      sigungu_name[2] = new Array('녹번동', '불광1동', '불광2동', '갈현1동', '갈현2동', '구산동',
+               '대조동', '응암1동', '응암2동', '응암3동', '역촌동', '신사1동', '신사2동', '증산동',
+               '수색동', '진관동', '갈현동', '구산동');
+      
+      var sikdang_name = new Array();
+      var latitude = new Array();
+      var lotitude = new Array();
+
+      sikdang_name[1] = new Array('용우동', '파리바게트', '뚜레쥬르', '김밥천국');
+      latitude[1] = new Array('37.5653456', '37.332654');
+      lotitude[1] = new Array('126.789513', '127.658421');
+
+      function change1(key, sel) {
+         if (key == '')
+            return;
+         var name = sigungu_name[key];
+         var val = sigungu_num[key];
+
+         for (i = sel.length - 1; i >= 0; i--)
+            sel.options[i] = null;
+         sel.options[0] = new Option('-선택-', '', '', 'true');
+         for (i = 0; i < name.length; i++) {
+            sel.options[i + 1] = new Option(name[i], val[i]);
+         }
+      }
+
+      function button1_click() {
+         map.setCenter(new daum.maps.LatLng(latitude[1][0], lotitude[1][0]));
+      }
+
+      var database = firebase.database();
+      for (i = 0; i < sigungu_name[1].length; i++)
+         database.ref('database-Mapogu/').push({
+            "region" : sigungu_name[1][i],
+            "name" : sikdang_name[1][i],
+            "Lat" : latitude[1][i],
+            "Lot" : lotitude[1][i]
+         })
+   </script>
+</body>
+</html>
