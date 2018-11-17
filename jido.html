@@ -1,26 +1,59 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-        <meta charset="euc.kr">
-        <link href="1115test.css" rel="stylesheet" type="text/css">
-	<style>
-		#f1{ position:absoulute; top:300px; left: 600px;}
-	</style>
- </head>
-<script>
-arrcode1 = new Array;
-arrcode2 = new Array;
-arrcode3 = new Array;
-arrcode4 = new Array;
-	
-function checkin(m){
-	arrcode1[idx]=f1;
-	arrcode1[idx]=f2;
-	arrcode1[idx]=f3;
-	arrcode1[idx]=f4;
+<meta charset="utf-8">
+<link href="mystyle.css" rel="stylesheet" type="text/css">
+
+</head>
 <body>
+   <div id=wrap>
+      <div id=header>
+         <div id=logo>
+            <img src="LOGO.jpg" width="120" hight="90">
+         </div>
+      </div>
+
+      <div id=menu>
+         <ul>
+            <li><a href="" target="blank">홈</a></li>
+            <li><a href="find.html" target="blank">가맹점찾기</a></li>
+            <li><a href="" target="blank">지도보기</a></li>
+            <li><a href="" target="blank">커뮤니티</a></li>
+         </ul>
+      </div>
+
+      <div id=main>
+         <div id=left></div>
+         <div id=center >
+         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=99a9e9ea9970e04758525361deb9d32f"></script>
+   <script>
+      var container = document.getElementById('center');
+      var options = {
+         center: new daum.maps.LatLng(37.5653456, 126.9054347),
+         level: 3
+      };
+
+      var map = new daum.maps.Map(container, options);
+   </script>
+   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+         </div>
+         
+         <div id=right>
+         <a id=bot href=""><img src="bot.png" width=80px hight=80px></a>
+         </div>
+      </div>
+
+      <div id=footer>
+         phone number : 010-5068-6175<br /> e-mail : ildoo5896@naver.com
+         </p>
+         <a href="http://facebook.com" target="_blank"> <img
+            src="facebook.gif" height="32" alt="Facebook">
+         </a> <a href="http://twitter.com" target="_blank"> <img
+            src="twitter.gif" height="32" alt="Twitter">
+         </a> <a href="http://plus.google.com" target="_blank"> <img
+            src="googleplus-icon.png" height="32" alt="Google Plus">
+         </a>
+      </div>
+   </div>
 </body>
 </html>
-
-</html> 
