@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<link href="mystyle.css" rel="stylesheet" type="text/css">
+<script language="javascript"> 
+
+      function Jido(value) { 
+        this.value = value; 
+        this.length = 0; 
+      } 
+
+      function addJido(jido, value) { 
+        jido[jido.length] = new Jido(value); 
+        jido.length++; 
+      } 
+      
+      var jido = new Jido(); 
+
+      addJido(jido, "전국구"); 
+      addJido(jido, "서울");
+      addJido(jido, "부산");
+      addJido(jido, "대구");
+      addJido(jido, "인천");
+      addJido(jido, "광주");
+      addJido(jido, "대전");
+      addJido(jido, "울산");
+      addJido(jido, "강원");
+      addJido(jido, "경기");
+      addJido(jido, "경남");
+      addJido(jido, "경북");
+
+      addJido(jido[1], "시-군-구"); 
+      addJido(jido[1], "마포구"); 
+      addJido(jido[1], "도봉구"); 
+      addJido(jido[1], "은평구");
+      addJido(jido[1], "강서구");
+      addJido(jido[1], "동작구");
+      addJido(jido[1], "양천구");
+      addJido(jido[1], "성북구");
+      addJido(jido[1], "성동구");
+      addJido(jido[1], "중구");
+      addJido(jido[1], "중랑구");
+
+      addJido(jido[2], "시-군-구");
+      addJido(jido[2], "중구"); 
+      addJido(jido[2], "서구"); 
+      addJido(jido[2], "동구"); 
+      addJido(jido[2], "영도구"); 
+      addJido(jido[2], "부산진구"); 
+      addJido(jido[2], "동래구"); 
+      addJido(jido[2], "남구"); 
+      addJido(jido[2], "영도구구"); 
+ 
+
+      addJido(jido[3], "시-군-구"); 
+      addJido(jido[3], "중구"); 
+      addJido(jido[3], "북구");
+      addJido(jido[3], "남구");       
+      addJido(jido[3], "서구"); 
+      addJido(jido[3], "동구"); 
+      addJido(jido[3], "수성구");
+      addJido(jido[3], "달서구"); 
+      addJido(jido[3], "달성군");
+      
+      
+     addJido(jido[1][1], "동-읍-리"); 
+      addJido(jido[1][1], "성산동"); 
+      addJido(jido[1][1], "아현동");  
+      addJido(jido[1][1], "도화동"); 
+      addJido(jido[1][1], "용강동");  
+      addJido(jido[1][1], "대흥동"); 
+      addJido(jido[1][1], "염리동");
+      addJido(jido[1][1], "서교동");
+      addJido(jido[1][1], "연남동");
+      addJido(jido[1][1], "합정동");
+      addJido(jido[1][1], "신수동");
+      addJido(jido[1][1], "서강동");
+      addJido(jido[1][1], "망원1동");
+      addJido(jido[1][1], "망원2동");
+      addJido(jido[1][1], "공덕동");
+      addJido(jido[1][1], "성산1동");
+
+      addJido(jido[1][2], "동-읍-리"); 
+      addJido(jido[1][2], "쌍문동");
+      addJido(jido[1][2], "방학동");
+      addJido(jido[1][2], "창동");
+      addJido(jido[1][2], "도봉동");
+      addJido(jido[1][2], "창1동");
+      addJido(jido[1][2], "창2동");
+      addJido(jido[1][2], "창3동");
+      addJido(jido[1][2], "창4동");
+      addJido(jido[1][2], "창5동");
+      addJido(jido[1][2], "도봉1동");
+      addJido(jido[1][2], "도봉2동");
+      
+      addJido(jido[1][3], "동-읍-리"); 
+      addJido(jido[1][3], "수색동");
+      addJido(jido[1][3], "녹번동");
+      addJido(jido[1][3], "불광동"); 
+      addJido(jido[1][3], "갈현동"); 
+      addJido(jido[1][3], "구산동"); 
+      addJido(jido[1][3], "대조동"); 
+      addJido(jido[1][3], "응암동"); 
+      addJido(jido[1][3], "역촌동"); 
+      addJido(jido[1][3], "신사동");
+      
+      addJido(jido[1][1][1], "상호명")
+      addJido(jido[1][1][1], "용우동")
+      addJido(jido[1][1][1], "김밥나라")
+      addJido(jido[1][1][1], "파리바게트")
+      addJido(jido[1][1][1], "뚜레쥬르")
+      addJido(jido[1][1][1], "우성반점")
+      
+      addJido(jido[1][1][1][0], "위도")
+      addJido(jido[1][1][1][1], "37.5653456")
+      addJido(jido[1][1][1][2], "37.5702658")
+      addJido(jido[1][1][1][3], "37.5653365")
+      addJido(jido[1][1][1][4], "37.5680933")
+      addJido(jido[1][1][1][5], "37.5710034")
+      
+      addJido(jido[1][1][1][0], "경도")
+      addJido(jido[1][1][1][1], "126.9054347")
+      addJido(jido[1][1][1][2], "126.9012231")
+      addJido(jido[1][1][1][3], "126.8998974")
+      addJido(jido[1][1][1][4], "126.9061699")
+      addJido(jido[1][1][1][5], "126.9005553")
+
+      /* 첫번째 동적 셀렉트 변수 끝 */
+
+function initForm(form) { 
+  /* 첫번째 동적 셀렉트 변수 설정 */
+  form.sigungu1.length = jido.length; 
+  for (i = 0; i < jido.length; i++) 
+    form.sigungu1[i].text = jido[i].value; 
+  form.sigungu1.selectedIndex = 0; 
+  form.sido1.selectedIndex = 0;
+
+
+} 
+
+/* 첫번째 동적 셀렉트 구현 */
+function change_sigungu1(form) { 
+  var i = form.sigungu1.selectedIndex; 
+  form.sido1.length = jido[i].length; 
+  for (j = 0; j < form.sido1.length; j++) 
+    form.sido1[j].text = jido[i][j].value; 
+  form.sido1.selectedIndex = 0; 
+  change_sido1(form); 
+} 
+
+function change_sido1(form) { 
+  var i = form.sigungu1.selectedIndex 
+  var j = form.sido1.selectedIndex; 
+  form.dong1.length = jido[i][j].length; 
+  for (k = 0; k < form.dong1.length; k++) 
+    form.dong1[k].text = jido[i][j][k].value; 
+  form.dong1.selectedIndex = 0; 
+} 
+
+function change_dong1(form) { 
+  var i = form.sigungu1.selectedIndex 
+  var j = form.sido1.selectedIndex;
+  var k = form.dong1.selectedIndex;   
+  form.view.length = jido[i][j][k].length; 
+  for (l = 0; l < form.view.length; l++) 
+    form.view[l].text = jido[i][j][k][l].value; 
+  form.view.selectedIndex = 0; 
+}
+
+</SCRIPT> 
+<title>지도</title>
+</head>
+<body onLoad="initForm(document.form)"> 
+   <div id=wrap>
+      <div id=header>
+         <div id=logomain>
+            <img src="LOGO.jpg" width="120" hight="90">
+         </div>
+      </div>
+      <div id=menu>
+         <ul>
+            <li><a href="" target="blank">홈</a></li>
+            <li><a href="find.html" target="blank">가맹점찾기</a></li>
+            <li><a href="">지도보기</a></li>
+            <li><a href="">커뮤니티</a></li>
+         </ul>
+      </div>
+      <div id=main>
+         <div id=left></div>
+         <div id=center>
+            <form name="form">
+               <div id="map" style="width: 500px; height: 400px;"></div>
+               <script type="text/javascript"
+                  src="//dapi.kakao.com/v2/maps/sdk.js?appkey=99a9e9ea9970e04758525361deb9d32f"></script>
+               <script>
+                  
+                  var container = document.getElementById('map');
+                  var options = {
+                     center : new daum.maps.LatLng(37.5,126.9),
+                     level : 3
+                  };
+
+                  var map = new daum.maps.Map(container, options);
+
+                  var marker = new daum.maps.Marker({
+                     position : map.getCenter()
+                  });
+                  marker.setMap(map);
+               </script>
+
+<h1>전국구의 가맹점을 찾아보아요</h1> 
+
+<form name="form"  > 
+<select name="sigungu1" onChange="change_sigungu1(this.form)"></select> 
+<select name="sido1" onChange="change_sido1(this.form)"></select> 
+<select name="dong1" onChange="change_dong1(this.form)"></select> 
+ <INPUT type=button id="button1" onclick="button1_click()"
+                     value=다음>
+</form> 
+         </div>
+
+      </div>
+   </div>
+   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>
+   <script type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+      
+   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-auth.js"></script>
+   <script
+      src="https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js"></script>
+   <script>
+      // Initialize Firebase
+      var config = {
+         apiKey : "AIzaSyALqBTAi2BUZlkdCmk3JMAYGixoOA4ZJrs",
+         authDomain : "hackathon-7e84a.firebaseapp.com",
+         databaseURL : "https://hackathon-7e84a.firebaseio.com",
+         projectId : "hackathon-7e84a",
+         storageBucket : "",
+         messagingSenderId : "173241953951"
+      };
+      firebase.initializeApp(config);
+      var database = firebase.database();
+      for (i = 0; i < jido[1].length; i++)
+         database.ref('database/').push({
+            "지역" : jido[i+1]
+         });
+      var geocoder = new daum.maps.services.Geocoder();
+      
+      function setCenter() {            
+    	   var moveLatLon = new daum.maps.LatLng(37.5710034, 126.9005553);
+    	   
+    	   map.setCenter(moveLatLon);
+    	}
+      
+      function button1_click() {
+         setCenter();
+         var marker = new daum.maps.Marker({
+             position : map.getCenter()
+          });
+          marker.setMap(map);
+      }
+
+      
+   </script>
+</body>
+</html>
